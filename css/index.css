@@ -89,6 +89,7 @@ video {
 body {
   background-color: #FAFFF8;
   font-family: "roboto";
+  color: #3E3E3E;
 }
 header nav {
   display: flex;
@@ -127,11 +128,40 @@ header .hero .hero-left {
   height: 100%;
   background-color: #CECECE;
 }
+header .hero .hero-left h3 {
+  position: absolute;
+  top: 20vh;
+  left: 11vw;
+  font-size: 56px;
+}
+header .hero .hero-left h4 {
+  position: absolute;
+  top: 40vh;
+  left: 11vw;
+  font-size: 24px;
+  line-height: 2;
+}
+header .hero .hero-left button {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: inherit;
+  color: inherit;
+  width: 250px;
+  height: 90px;
+  position: absolute;
+  top: 65%;
+  left: 18.45%;
+  background-color: #7DB569;
+  border: none;
+}
 header .hero .hero-right {
   height: 100%;
   width: 67%;
   background-image: url("../img/hero-img.jpg");
   background-size: cover;
+}
+header hr {
+  margin: 4rem 5%;
 }
 .container {
   background-color: #FAFFF8;
