@@ -91,11 +91,26 @@ body {
   font-family: "roboto";
   color: #3E3E3E;
 }
+.container {
+  background-color: #FAFFF8;
+  width: 83%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+header .nav-wrapper {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 83%;
+  background-color: #FAFFF8;
+  z-index: 1;
+  padding: 0.5rem 0;
+}
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 header nav .logo {
   display: flex;
@@ -121,6 +136,7 @@ header .hero {
   height: 550px;
   width: 100%;
   display: flex;
+  margin-top: 85px;
   max-width: 1200px;
 }
 header .hero .hero-left {
@@ -130,7 +146,7 @@ header .hero .hero-left {
 }
 header .hero .hero-left h3 {
   position: absolute;
-  top: 20vh;
+  top: 18vh;
   left: 11vw;
   font-size: 56px;
 }
@@ -148,9 +164,9 @@ header .hero .hero-left button {
   color: inherit;
   width: 250px;
   height: 90px;
-  position: absolute;
-  top: 65%;
-  left: 18.45%;
+  position: relative;
+  float: right;
+  top: 70%;
   background-color: #7DB569;
   border: none;
 }
@@ -161,11 +177,98 @@ header .hero .hero-right {
   background-size: cover;
 }
 header hr {
+  margin: 4rem 5% 5rem 5%;
+}
+main {
   margin: 4rem 5%;
 }
-.container {
-  background-color: #FAFFF8;
-  width: 83%;
-  margin: 0 auto;
-  max-width: 1200px;
+main .about1 {
+  background-color: #CECECE;
+  height: 240px;
+  margin: 3rem 0;
+  display: flex;
+  border-radius: 5px;
+}
+main .about1 img {
+  width: 35%;
+  height: 100%;
+}
+main .about1 div {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about1 div p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .about2 {
+  background-color: #F5F8F4;
+  height: 340px;
+  margin: 3rem 0;
+  display: flex;
+  border-radius: 5px;
+}
+main .about2 img {
+  width: 35%;
+  height: 100%;
+}
+main .about2 div {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about2 div p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .about3 {
+  background-color: #CECECE;
+  height: 240px;
+  margin: 3rem 0;
+  display: flex;
+  border-radius: 5px;
+}
+main .about3 img {
+  width: 35%;
+  height: 100%;
+}
+main .about3 div {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about3 div p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .testimonials {
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+main .testimonials article {
+  width: 23%;
+  height: 300px;
+  background-color: #7DB569;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+main .testimonials article img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+main .testimonials article h4 {
+  color: #FAFFF8;
+  font-size: 20px;
+  font-weight: 600;
 }
