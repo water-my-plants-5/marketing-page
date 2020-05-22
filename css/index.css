@@ -179,6 +179,26 @@ header .hero .hero-right {
 header hr {
   margin: 4rem 5% 5rem 5%;
 }
+footer {
+  height: 200px;
+  width: 100vw;
+  background-color: #CECECE;
+  margin-top: 7rem;
+}
+footer .github-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+footer .iconify {
+  color: #7DB569;
+  margin-top: 1rem;
+}
+footer p {
+  font-size: 2rem;
+}
 main {
   margin: 4rem 5%;
 }
@@ -271,4 +291,10 @@ main .testimonials article h4 {
   color: #FAFFF8;
   font-size: 20px;
   font-weight: 600;
+}
+main .testimonials article p {
+  line-height: 1.5;
+  width: 90%;
+  padding: 1rem;
+  text-align: center;
 }
