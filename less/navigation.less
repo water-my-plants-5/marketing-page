@@ -4,6 +4,7 @@ header {
         position: fixed;
         top: 0;
         width: 83%;
+        max-width: 1200px;
         background-color: @primary-green;
         z-index: 1;
         padding: .5rem 0;
@@ -23,7 +24,7 @@ header {
                 width: 75px;
             }
             h1 {
-                font-size: 40px;
+                font-size: 3vw;
                 color: @font-color;
                 padding-left: 20px;
                 font-family: @title-font;
@@ -34,10 +35,10 @@ header {
         .links {
 
             a {
-                font-size: 30px;
+                font-size: 24px;
                 text-decoration: none;
                 color: @font-color;
-                margin-left: 40px;
+                margin-left: 20px;
             }
         }
     }
@@ -55,17 +56,19 @@ header {
             background-color: @primary-gray;
 
             h3 {
-                position: absolute;
-                top: 18vh;
-                left: 11vw;
-                font-size: 56px;
+                position: relative;
+                top: 10vh;
+                left: 2rem;
+                font-size: 3.5vw;
+                overflow: visible;
+                white-space: nowrap;
             }
             h4 {
-                position: absolute;
-                top: 40vh;
-                left: 11vw;
-                font-size: 24px;
+                font-size: 1.5vw;
                 line-height: 2;
+                position: relative;
+                top: 30%;
+                margin-left: 2rem;
             }
             button {
                 font-size: 32px;
@@ -76,7 +79,7 @@ header {
                 height: 90px;
                 position: relative;
                 float: right;
-                top: 70%;
+                top: 40%;
                 background-color: @secondary-green;
                 border: none;
             }
