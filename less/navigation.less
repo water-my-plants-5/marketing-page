@@ -1,0 +1,97 @@
+header {
+    .nav-wrapper {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 83%;
+        max-width: 1200px;
+        background-color: @primary-green;
+        z-index: 1;
+        padding: .5rem 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 75px;
+            }
+            h1 {
+                font-size: 3vw;
+                color: @font-color;
+                padding-left: 20px;
+                font-family: @title-font;
+                font-weight: 600;
+            }
+        }
+
+        .links {
+
+            a {
+                font-size: 24px;
+                text-decoration: none;
+                color: @font-color;
+                margin-left: 20px;
+            }
+        }
+    }
+    .hero {
+
+        height: 550px;
+        width: 100%;
+        display: flex;
+        margin-top: 85px;
+        max-width: 1200px;
+
+        .hero-left {
+            width: 33%;
+            height: 100%;
+            background-color: @primary-gray;
+
+            h3 {
+                position: relative;
+                top: 10vh;
+                left: 2rem;
+                font-size: 3.5vw;
+                overflow: visible;
+                white-space: nowrap;
+            }
+            h4 {
+                font-size: 1.5vw;
+                line-height: 2;
+                position: relative;
+                top: 30%;
+                margin-left: 2rem;
+            }
+            button {
+                font-size: 32px;
+                font-weight: 700;
+                font-family: inherit;
+                color: inherit;
+                width: 250px;
+                height: 90px;
+                position: relative;
+                float: right;
+                top: 40%;
+                background-color: @secondary-green;
+                border: none;
+            }
+        }
+        .hero-right {
+            height: 100%;
+            width: 67%;
+            background-image: url("../img/hero-img.jpg");
+            background-size: cover;
+        }
+    }
+    hr {
+        margin: 4rem 5% 5rem 5%;
+    }
+}

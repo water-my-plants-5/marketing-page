@@ -1,0 +1,365 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  background-color: #FAFFF8;
+  font-family: "roboto";
+  color: #3E3E3E;
+}
+.container {
+  background-color: #FAFFF8;
+  width: 83%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+header .nav-wrapper {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 83%;
+  max-width: 1200px;
+  background-color: #FAFFF8;
+  z-index: 1;
+  padding: 0.5rem 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+header nav .logo {
+  display: flex;
+  align-items: center;
+}
+header nav .logo img {
+  width: 75px;
+}
+header nav .logo h1 {
+  font-size: 3vw;
+  color: #3E3E3E;
+  padding-left: 20px;
+  font-family: "montserrat";
+  font-weight: 600;
+}
+header nav .links a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #3E3E3E;
+  margin-left: 20px;
+}
+header .hero {
+  height: 550px;
+  width: 100%;
+  display: flex;
+  margin-top: 85px;
+  max-width: 1200px;
+}
+header .hero .hero-left {
+  width: 33%;
+  height: 100%;
+  background-color: #CECECE;
+}
+header .hero .hero-left h3 {
+  position: relative;
+  top: 10vh;
+  left: 2rem;
+  font-size: 3.5vw;
+  overflow: visible;
+  white-space: nowrap;
+}
+header .hero .hero-left h4 {
+  font-size: 1.5vw;
+  line-height: 2;
+  position: relative;
+  top: 30%;
+  margin-left: 2rem;
+}
+header .hero .hero-left button {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: inherit;
+  color: inherit;
+  width: 250px;
+  height: 90px;
+  position: relative;
+  float: right;
+  top: 40%;
+  background-color: #7DB569;
+  border: none;
+}
+header .hero .hero-right {
+  height: 100%;
+  width: 67%;
+  background-image: url("../img/hero-img.jpg");
+  background-size: cover;
+}
+header hr {
+  margin: 4rem 5% 5rem 5%;
+}
+footer {
+  height: 200px;
+  width: 100vw;
+  background-color: #CECECE;
+  margin-top: 7rem;
+}
+footer .github-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+footer .iconify {
+  color: #7DB569;
+  margin-top: 1rem;
+}
+footer p {
+  font-size: 2vw;
+}
+main {
+  margin: 4rem 5%;
+}
+main .about1 {
+  background-color: #CECECE;
+  height: 240px;
+  margin: 3rem 0;
+  display: flex;
+  border-radius: 5px;
+}
+main .about1 img {
+  width: 35%;
+  height: 100%;
+}
+main .about1 div {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about1 div p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .about2 {
+  background-color: #F5F8F4;
+  height: 340px;
+  margin: 3rem 0;
+  display: flex;
+  border-radius: 5px;
+}
+main .about2 img {
+  width: 35%;
+  height: 100%;
+}
+main .about2 div {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about2 div p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .about3 {
+  background-color: #CECECE;
+  height: 240px;
+  margin: 3rem 0;
+  display: flex;
+  border-radius: 5px;
+}
+main .about3 img {
+  width: 35%;
+  height: 100%;
+}
+main .about3 div {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about3 div p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .testimonials {
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+main .testimonials article {
+  width: 23%;
+  height: 300px;
+  background-color: #7DB569;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+main .testimonials article img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+main .testimonials article h4 {
+  color: #FAFFF8;
+  font-size: 20px;
+  font-weight: 600;
+}
+main .testimonials article p {
+  line-height: 1.5;
+  width: 90%;
+  padding: 1rem;
+  text-align: center;
+}
+.dev-teamwrapper h2 {
+  font-size: 3vw;
+  text-align: center;
+}
+.dev-team {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #CECECE;
+  height: 60vh;
+  margin-top: -6vh;
+}
+.dev-team article {
+  width: 15vw;
+  height: 20vw;
+  background-color: #7DB569;
+  max-height: 350px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dev-team article img {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+.dev-team article h4 {
+  color: #FAFFF8;
+  font-size: 1.8vw;
+  font-weight: 600;
+}
+.dev-team article p {
+  line-height: 1.2;
+  width: 90%;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2vw;
+}
+.about-footer {
+  background-color: #FAFFF8;
+  position: absolute;
+  bottom: 0;
+}
+.about-footer img {
+  width: 8rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.about-footer .cover {
+  width: 9rem;
+  height: 11rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FAFFF8;
+  opacity: 0.7;
+}

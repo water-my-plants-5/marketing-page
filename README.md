@@ -1,1 +1,1 @@
-# marketing-page
+# marketing-page for plantLove plant watering app
