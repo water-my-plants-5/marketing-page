@@ -1,5 +1,11 @@
 main {
     margin: 4rem 5%;
+    @media @mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .about1 {
         background-color: @primary-gray;
         height: 240px;
@@ -7,11 +13,16 @@ main {
         display: flex;
         border-radius: 5px;
         
+        
 
 
         img {
             width: 35%;
             height: 100%;
+
+            @media @mobile {
+                width: 100%;
+            }
         }
         div {
             width: 65%;
@@ -19,10 +30,28 @@ main {
             justify-content: center;
             align-items: center;
 
-            p {
-                font-size: 28px;
-                line-height: 1.5;
+            @media @mobile {
+                width: 100%;
+                background-color: @primary-gray;
+                height: 10vh;
+                margin-top: -1vw;
             }
+            
+
+
+            p {
+                font-size: 2vw;
+                line-height: 1.5;
+
+                @media @mobile {
+                    font-size: 3.5vw;
+                }
+            }
+            
+        }
+        @media @mobile {
+            display: inline;
+            margin-top: -5vw;
         }
 
     }
@@ -32,10 +61,15 @@ main {
         margin: 3rem 0;
         display: flex;
         border-radius: 5px;
+        
 
         img {
             width: 35%;
             height: 100%;
+
+            @media @mobile {
+                width: 100%;
+            }
         }
         div {
             width: 65%;
@@ -43,11 +77,31 @@ main {
             justify-content: center;
             align-items: center;
 
+            @media @mobile {
+                width: 80%;
+                margin: 0 auto;
+            }
+
             p {
-                font-size: 28px;
+                font-size: 2vw;
                 line-height: 1.5;
 
+                @media @mobile {
+                        height: 20vw;
+                        width: 100%;
+                        font-size: 3.5vw;
+                        padding-top: 10vw;
+
+                        br {
+                            display: none;
+                        }
+                }
             }
+        }
+        @media @mobile {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 45vw;
         }
     }
     .about3 {
@@ -60,6 +114,10 @@ main {
         img {
             width: 35%;
             height: 100%;
+
+            @media @mobile {
+                width: 100%;
+            }
         }
         div {
             width: 65%;
@@ -67,16 +125,37 @@ main {
             justify-content: center;
             align-items: center;
 
-            p {
-                font-size: 28px;
-                line-height: 1.5;
+            @media @mobile {
+                width: 100%;
+                background-color: @primary-gray;
+                height: 10vh;
+                margin-top: -1vw;
             }
+
+            p {
+                font-size: 2vw;
+                line-height: 1.5;
+
+                @media @mobile {
+                    font-size: 3.5vw;
+                }
+            }
+        }
+         @media @mobile {
+            display: inline;
+            margin-top: -5vw;
         }
     }
     .testimonials {
         display: flex;
         justify-content: space-around;
         margin: 4rem 0;
+
+        @media @mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         article {
             width: 23%;
@@ -88,17 +167,32 @@ main {
             align-items: center;
             border-radius: 2%;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+            @media @mobile {
+                width: 80%;
+                height: 300px;
+                margin: 10vw 0;
+            }
 
             img {
-                width: 150px;
-                height: 150px;
+                width: 10vw;
+                height: 10vw;
                 border-radius: 50%;
                 padding: .7rem;
+
+                @media @mobile {
+                    width: 30vw;
+                    height: 30vw;
+                }
             }
             h4 {
                 color: @primary-green;
-                font-size: 20px;
+                font-size: 2vw;
                 font-weight: 600;
+
+                @media @mobile {
+                    font-size: 5vw;
+                }
             }
             p {
                 line-height: 1.5;
