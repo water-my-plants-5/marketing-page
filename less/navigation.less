@@ -1,4 +1,7 @@
 header {
+    a {
+        text-decoration: none;
+    }
     .nav-wrapper {
         overflow: hidden;
         position: fixed;
@@ -7,7 +10,7 @@ header {
         max-width: 1200px;
         background-color: @primary-green;
         z-index: 1;
-        padding: .5rem 0;
+        padding: .5rem 0;       
     }
 
     nav {
@@ -22,6 +25,8 @@ header {
             @media @mobile {
                 display: block;
                 font-size: 3rem;
+                cursor: pointer;
+                // color: @secondary-green;
             }
         }
         .logo {
@@ -30,6 +35,12 @@ header {
 
             img {
                 width: 75px;
+                @media @mobile {
+                    display: block;
+                    z-index: 3;
+                    width: 60px;
+                    margin-top: 2vw;
+                }
             }
             h1 {
                 font-size: 3vw;
@@ -46,16 +57,50 @@ header {
 
         .links {
             // padding-left: 10vw;
+            @media @mobile {
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: @primary-green;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // display: none;
+                clip-path: circle(100px at 90% -10%);
+                -webkit-clip-path: circle(100px at 90% -10%);
+                transition: all 1s ease-out;
+            }
+
+
+            
             a {
                 font-size: 2vw;
                 text-decoration: none;
                 color: @font-color;
                 margin-left: 20px;
-            }
+                
+                @media @mobile {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 5vw;
+                    margin: 10vw 0;
+                    color: @secondary-green;
+                    font-weight: 900;
+                }
 
-           @media @mobile {
-               display: none;
-           }
+                @media @tablet {
+                    font-size: 2.7vw;
+                    margin-left: 2vw;
+                }
+                
+            }
+            a:hover {
+                color: rgb(147, 147, 147);
+            }
+           
         }
     }
     .hero {
@@ -107,6 +152,10 @@ header {
                 font-size: 3.5vw;
                 overflow: visible;
                 white-space: nowrap;
+
+                @media @tablet {
+                    font-size: 2rem;
+                }
             }
             h4 {
                 font-size: 1.4vw;
@@ -114,6 +163,10 @@ header {
                 position: relative;
                 top: 30%;
                 margin-left: 2rem;
+
+                @media @tablet {
+                    font-size: 1rem;
+                }
             }
             button {
                 font-size: 32px;
@@ -128,6 +181,10 @@ header {
                 top: 40%;
                 background-color: @secondary-green;
                 border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background: rgb(150, 210, 150);
             }
         }
         .hero-right {
@@ -145,4 +202,23 @@ header {
     hr {
         margin: 4rem 5% 5rem 5%;
     }
+}
+
+.links.open {
+    clip-path: circle(1050px at 90% -10%);
+    -webkit-clip-path: circle(1050px at 90% -10%);
+}
+
+header.sticky {
+    position: sticky;
+    top: 0;
+}
+
+main.display {
+    display: none;
+    
+}
+
+footer.display {
+    display: none;
 }

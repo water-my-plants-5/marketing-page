@@ -97,6 +97,9 @@ body {
   margin: 0 auto;
   max-width: 1200px;
 }
+header a {
+  text-decoration: none;
+}
 header .nav-wrapper {
   overflow: hidden;
   position: fixed;
@@ -116,10 +119,11 @@ header nav {
 header nav .burger {
   display: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header nav .burger {
     display: block;
     font-size: 3rem;
+    cursor: pointer;
   }
 }
 header nav .logo {
@@ -129,6 +133,14 @@ header nav .logo {
 header nav .logo img {
   width: 75px;
 }
+@media (max-width: 600px) {
+  header nav .logo img {
+    display: block;
+    z-index: 3;
+    width: 60px;
+    margin-top: 2vw;
+  }
+}
 header nav .logo h1 {
   font-size: 3vw;
   color: #3E3E3E;
@@ -136,9 +148,26 @@ header nav .logo h1 {
   font-family: "montserrat";
   font-weight: 600;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header nav .logo h1 {
     font-size: 6vw;
+  }
+}
+@media (max-width: 600px) {
+  header nav .links {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FAFFF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
   }
 }
 header nav .links a {
@@ -147,10 +176,24 @@ header nav .links a {
   color: #3E3E3E;
   margin-left: 20px;
 }
-@media (max-width: 500px) {
-  header nav .links {
-    display: none;
+@media (max-width: 600px) {
+  header nav .links a {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vw;
+    margin: 10vw 0;
+    color: #7DB569;
+    font-weight: 900;
   }
+}
+@media (max-width: 800px) {
+  header nav .links a {
+    font-size: 2.7vw;
+    margin-left: 2vw;
+  }
+}
+header nav .links a:hover {
+  color: #939393;
 }
 header .hero {
   height: 550px;
@@ -159,7 +202,7 @@ header .hero {
   margin-top: 85px;
   max-width: 1200px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header .hero {
     height: 250px;
     padding-top: 2rem;
@@ -181,7 +224,7 @@ header .hero .mobile-btn {
   border: none;
   border-radius: 8%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header .hero .mobile-btn {
     display: block;
   }
@@ -191,7 +234,7 @@ header .hero .hero-left {
   height: 100%;
   background-color: #CECECE;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header .hero .hero-left {
     display: none;
   }
@@ -204,12 +247,22 @@ header .hero .hero-left h3 {
   overflow: visible;
   white-space: nowrap;
 }
+@media (max-width: 800px) {
+  header .hero .hero-left h3 {
+    font-size: 2rem;
+  }
+}
 header .hero .hero-left h4 {
   font-size: 1.4vw;
   line-height: 2;
   position: relative;
   top: 30%;
   margin-left: 2rem;
+}
+@media (max-width: 800px) {
+  header .hero .hero-left h4 {
+    font-size: 1rem;
+  }
 }
 header .hero .hero-left button {
   font-size: 32px;
@@ -224,6 +277,10 @@ header .hero .hero-left button {
   top: 40%;
   background-color: #7DB569;
   border: none;
+  cursor: pointer;
+}
+header .hero .hero-left button:hover {
+  background: #96d296;
 }
 header .hero .hero-right {
   height: 100%;
@@ -231,7 +288,7 @@ header .hero .hero-right {
   background-image: url("../img/hero-img.jpg");
   background-size: cover;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header .hero .hero-right {
     width: 100%;
     height: 100%;
@@ -239,6 +296,20 @@ header .hero .hero-right {
 }
 header hr {
   margin: 4rem 5% 5rem 5%;
+}
+.links.open {
+  clip-path: circle(1050px at 90% -10%);
+  -webkit-clip-path: circle(1050px at 90% -10%);
+}
+header.sticky {
+  position: sticky;
+  top: 0;
+}
+main.display {
+  display: none;
+}
+footer.display {
+  display: none;
 }
 footer {
   height: 200px;
@@ -257,10 +328,13 @@ footer .iconify {
   color: #7DB569;
   margin-top: 1rem;
 }
+footer .iconify:hover {
+  color: #96d296;
+}
 footer p {
   font-size: 2vw;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   footer p {
     font-size: 4vw;
   }
@@ -268,7 +342,7 @@ footer p {
 main {
   margin: 4rem 5%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main {
     display: flex;
     flex-direction: column;
@@ -286,7 +360,7 @@ main .about1 img {
   width: 35%;
   height: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about1 img {
     width: 100%;
   }
@@ -297,7 +371,7 @@ main .about1 div {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about1 div {
     width: 100%;
     background-color: #CECECE;
@@ -309,12 +383,12 @@ main .about1 div p {
   font-size: 2vw;
   line-height: 1.5;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about1 div p {
     font-size: 3.5vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about1 {
     display: inline;
     margin-top: -5vw;
@@ -331,9 +405,10 @@ main .about2 img {
   width: 35%;
   height: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about2 img {
     width: 100%;
+    max-height: auto;
   }
 }
 main .about2 div {
@@ -342,7 +417,7 @@ main .about2 div {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about2 div {
     width: 80%;
     margin: 0 auto;
@@ -352,7 +427,7 @@ main .about2 div p {
   font-size: 2vw;
   line-height: 1.5;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about2 div p {
     height: 20vw;
     width: 100%;
@@ -363,7 +438,7 @@ main .about2 div p {
     display: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about2 {
     display: flex;
     flex-direction: column-reverse;
@@ -381,7 +456,7 @@ main .about3 img {
   width: 35%;
   height: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about3 img {
     width: 100%;
   }
@@ -392,7 +467,7 @@ main .about3 div {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about3 div {
     width: 100%;
     background-color: #CECECE;
@@ -404,12 +479,12 @@ main .about3 div p {
   font-size: 2vw;
   line-height: 1.5;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about3 div p {
     font-size: 3.5vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main .about3 {
     display: inline;
     margin-top: -5vw;
@@ -420,7 +495,7 @@ main .testimonials {
   justify-content: space-around;
   margin: 4rem 0;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   main .testimonials {
     flex-direction: column;
     justify-content: center;
@@ -429,7 +504,7 @@ main .testimonials {
 }
 main .testimonials article {
   width: 23%;
-  height: 300px;
+  height: 320px;
   background-color: #7DB569;
   display: flex;
   justify-content: flex-start;
@@ -438,11 +513,23 @@ main .testimonials article {
   border-radius: 2%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  main .testimonials article {
+    height: 40vw;
+    width: 40vw;
+    margin: 7vw 0;
+  }
+}
+@media (max-width: 600px) {
   main .testimonials article {
     width: 80%;
     height: 300px;
     margin: 10vw 0;
+  }
+}
+@media (min-width: 1775px) {
+  main .testimonials article {
+    height: 360px;
   }
 }
 main .testimonials article img {
@@ -451,7 +538,13 @@ main .testimonials article img {
   border-radius: 50%;
   padding: 0.7rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  main .testimonials article img {
+    width: 20vw;
+    height: 20vw;
+  }
+}
+@media (max-width: 600px) {
   main .testimonials article img {
     width: 30vw;
     height: 30vw;
@@ -462,7 +555,12 @@ main .testimonials article h4 {
   font-size: 2vw;
   font-weight: 600;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  main .testimonials article h4 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 600px) {
   main .testimonials article h4 {
     font-size: 5vw;
   }
@@ -476,6 +574,21 @@ main .testimonials article p {
 .dev-teamwrapper h2 {
   font-size: 3vw;
   text-align: center;
+  position: relative;
+  top: 1%;
+  max-height: fit-content;
+}
+@media (max-width: 800px) {
+  .dev-teamwrapper .about-title {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 600px) {
+  .dev-teamwrapper .about-title {
+    font-size: 6vw;
+    font-weight: bold;
+    top: 26px;
+  }
 }
 .dev-team {
   display: flex;
@@ -485,15 +598,27 @@ main .testimonials article p {
   height: 60vh;
   margin-top: -6vh;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  .dev-team {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40rem;
+  }
+}
+@media (max-width: 600px) {
   .dev-team {
     flex-direction: column;
     height: auto;
   }
 }
+@media (max-width: 600px) {
+  .dev-team .first-article {
+    margin-top: 30vw;
+  }
+}
 .dev-team article {
   width: 15vw;
-  height: 20vw;
+  height: 21vw;
   background-color: #7DB569;
   max-height: 350px;
   display: flex;
@@ -502,11 +627,19 @@ main .testimonials article p {
   align-items: center;
   border-radius: 2%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 275px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  .dev-team article {
+    width: 14rem;
+    height: 15rem;
+    margin-bottom: -2rem;
+  }
+}
+@media (max-width: 600px) {
   .dev-team article {
     width: 50vw;
-    height: 60vw;
+    height: 65vw;
     margin: 10vw 0;
   }
 }
@@ -515,8 +648,16 @@ main .testimonials article p {
   height: 10vw;
   border-radius: 50%;
   padding: 0.7rem;
+  max-width: 150px;
+  max-height: 150px;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  .dev-team article img {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+@media (max-width: 600px) {
   .dev-team article img {
     width: 30vw;
     height: 30vw;
@@ -527,9 +668,19 @@ main .testimonials article p {
   font-size: 1.8vw;
   font-weight: 600;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+  .dev-team article h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
   .dev-team article h4 {
     font-size: 5vw;
+  }
+}
+@media (min-width: 1775px) {
+  .dev-team article h4 {
+    font-size: 2em;
   }
 }
 .dev-team article p {
@@ -539,10 +690,20 @@ main .testimonials article p {
   text-align: center;
   font-size: 1.2vw;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .dev-team article p {
-    font-size: 3vw;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .dev-team article p {
+    font-size: 4vw;
     margin-top: 1.5vw;
+  }
+}
+@media (min-width: 1775px) {
+  .dev-team article p {
+    font-size: 1.5em;
   }
 }
 .about-footer {
