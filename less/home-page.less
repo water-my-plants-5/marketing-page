@@ -4,6 +4,8 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        // add class to display none for burger menu
+        // display: none;
     }
 
     .about1 {
@@ -12,8 +14,6 @@ main {
         margin: 3rem 0;
         display: flex;
         border-radius: 5px;
-        
-        
 
 
         img {
@@ -69,6 +69,7 @@ main {
 
             @media @mobile {
                 width: 100%;
+                max-height: auto;
             }
         }
         div {
@@ -151,15 +152,15 @@ main {
         justify-content: space-around;
         margin: 4rem 0;
 
-        @media @mobile {
+        @media @tablet {
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-
+        
         article {
             width: 23%;
-            height: 300px;
+            height: 320px;
             background-color: @secondary-green;
             display: flex;
             justify-content: flex-start;
@@ -168,11 +169,20 @@ main {
             border-radius: 2%;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             
+            @media @tablet {
+                height: 40vw;
+                width: 40vw;
+                margin: 7vw 0;
+            }
             @media @mobile {
                 width: 80%;
                 height: 300px;
                 margin: 10vw 0;
             }
+
+            @media @large {
+                height: 360px;
+        }
 
             img {
                 width: 10vw;
@@ -180,6 +190,10 @@ main {
                 border-radius: 50%;
                 padding: .7rem;
 
+                @media @tablet {
+                    width: 20vw;
+                    height: 20vw;
+                }
                 @media @mobile {
                     width: 30vw;
                     height: 30vw;
@@ -189,7 +203,10 @@ main {
                 color: @primary-green;
                 font-size: 2vw;
                 font-weight: 600;
-
+                
+                @media @tablet {
+                    font-size: 1.8rem;
+                }
                 @media @mobile {
                     font-size: 5vw;
                 }
