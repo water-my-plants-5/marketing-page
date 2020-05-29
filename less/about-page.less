@@ -21,9 +21,7 @@
 }
 
 .dev-team {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        .layout(flex, space-around, center);
         background-color: @primary-gray;
         height: 60vh;
         margin-top: -6vh;
@@ -48,14 +46,11 @@
             }
 
         article {
-            width: 15vw;
-            height: 21vw;
+            .size(15vw, 21vw);
             background-color: @secondary-green;
             max-height: 350px;
-            display: flex;
-            justify-content: flex-start;
+            .layout(flex, flex-start, center);
             flex-direction: column;
-            align-items: center;
             border-radius: 2%;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             max-width: 275px;
@@ -63,42 +58,33 @@
             
 
              @media @tablet {
-                width: 14rem;
-                height: 15rem;
+                .size(14rem, 15rem);
                 margin-bottom: -2rem;
             }
 
             @media @mobile {
-                width: 50vw;
-                height: 65vw;
+                .size(50vw, 65vw);
                 margin: 10vw 0;
             }
-            
-            
-
 
             img {
-                width: 10vw;
-                height: 10vw;
+                .size(10vw, 10vw);
                 border-radius: 50%;
                 padding: .7rem;
                 max-width: 150px;
                 max-height: 150px;
 
                 @media @tablet {
-                    width: 7rem;
-                    height: 7rem;
+                    .size(7rem, 7rem);
                 }
                 @media @mobile {
-                    width: 30vw;
-                    height: 30vw;
+                    .size(30vw, 30vw);
                 }
-
             
             }
             h4 {
                 color: @primary-green;
-                font-size: 1.8vw;
+                font-size: 1.7vw;
                 font-weight: 600;
 
                 @media @tablet {
@@ -131,8 +117,7 @@
 
                 @media @large {
                     font-size: 1.5em;
-                }
-               
+                }              
             }
         }
     }

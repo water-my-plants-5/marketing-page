@@ -1,13 +1,10 @@
 footer {
-    height: 200px;
-    width: 100vw;
+    .size(100vw, 200px);
     background-color: @primary-gray;
     margin-top: 7rem;
 
     .github-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        .layout(flex, center, center);
         flex-direction: column;
         padding-top: 5rem;
     }    
@@ -25,4 +22,7 @@ footer {
             font-size: 4vw;
         }
     }
+}
+footer.display {
+    display: none;
 }
