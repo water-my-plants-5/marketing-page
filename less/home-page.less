@@ -4,21 +4,12 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        // add class to display none for burger menu
-        // display: none;
     }
 
     .about1 {
-        background-color: @primary-gray;
-        height: 240px;
-        margin: 3rem 0;
-        display: flex;
-        border-radius: 5px;
+        .about-style(240px, @primary-gray);
 
-
-        img {
-            width: 35%;
-            height: 100%;
+        img {.size(35%, 100%);
 
             @media @mobile {
                 width: 100%;
@@ -26,18 +17,13 @@ main {
         }
         div {
             width: 65%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .layout(flex, center, center);
 
             @media @mobile {
-                width: 100%;
+                .size(100%, 10vh);
                 background-color: @primary-gray;
-                height: 10vh;
                 margin-top: -1vw;
             }
-            
-
 
             p {
                 font-size: 2vw;
@@ -56,16 +42,10 @@ main {
 
     }
     .about2 {
-        background-color: @secondary-gray;
-        height: 340px;
-        margin: 3rem 0;
-        display: flex;
-        border-radius: 5px;
-        
+        .about-style(340px, @secondary-gray);
 
         img {
-            width: 35%;
-            height: 100%;
+            .size(35%, 100%);
 
             @media @mobile {
                 width: 100%;
@@ -74,9 +54,7 @@ main {
         }
         div {
             width: 65%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .layout(flex, center, center);
 
             @media @mobile {
                 width: 80%;
@@ -88,14 +66,13 @@ main {
                 line-height: 1.5;
 
                 @media @mobile {
-                        height: 20vw;
-                        width: 100%;
-                        font-size: 3.5vw;
-                        padding-top: 10vw;
+                    .size(100%, 20vw);
+                    font-size: 3.5vw;
+                    padding-top: 10vw;
 
-                        br {
-                            display: none;
-                        }
+                    br {
+                        display: none;
+                    }
                 }
             }
         }
@@ -105,51 +82,8 @@ main {
             margin-top: 45vw;
         }
     }
-    .about3 {
-        background-color: @primary-gray;
-        height: 240px;
-        margin: 3rem 0;
-        display: flex;
-        border-radius: 5px;
-
-        img {
-            width: 35%;
-            height: 100%;
-
-            @media @mobile {
-                width: 100%;
-            }
-        }
-        div {
-            width: 65%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @media @mobile {
-                width: 100%;
-                background-color: @primary-gray;
-                height: 10vh;
-                margin-top: -1vw;
-            }
-
-            p {
-                font-size: 2vw;
-                line-height: 1.5;
-
-                @media @mobile {
-                    font-size: 3.5vw;
-                }
-            }
-        }
-         @media @mobile {
-            display: inline;
-            margin-top: -5vw;
-        }
-    }
     .testimonials {
-        display: flex;
-        justify-content: space-around;
+        .layout(flex, space-around, center);
         margin: 4rem 0;
 
         @media @tablet {
@@ -159,24 +93,19 @@ main {
         }
         
         article {
-            width: 23%;
-            height: 320px;
+            .size(23%, 320px);
             background-color: @secondary-green;
-            display: flex;
-            justify-content: flex-start;
+            .layout(flex, flex-start, center);
             flex-direction: column;
-            align-items: center;
             border-radius: 2%;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             
             @media @tablet {
-                height: 40vw;
-                width: 40vw;
+                .size(40vw, 40vw);
                 margin: 7vw 0;
             }
             @media @mobile {
-                width: 80%;
-                height: 300px;
+                .size(80%, 300px);
                 margin: 10vw 0;
             }
 
@@ -185,18 +114,15 @@ main {
         }
 
             img {
-                width: 10vw;
-                height: 10vw;
+                .size(10vw, 10vw);
                 border-radius: 50%;
                 padding: .7rem;
 
                 @media @tablet {
-                    width: 20vw;
-                    height: 20vw;
+                    .size(20vw, 20vw);
                 }
                 @media @mobile {
-                    width: 30vw;
-                    height: 30vw;
+                    .size(30vw, 30vw);
                 }
             }
             h4 {
@@ -219,4 +145,8 @@ main {
             }
         }
     }
+}
+main.display {
+    display: none;
+    
 }
