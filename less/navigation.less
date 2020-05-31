@@ -154,12 +154,12 @@ header {
                     font-size: 1rem;
                 }
             }
-            button {
+            .button {
                 font-size: 32px;
                 font-weight: 700;
                 font-family: inherit;
                 color: inherit;
-                .size(20vw, 90px);
+                .size(20vw, 70px);
                 max-width: 300px;
                 position: relative;
                 float: right;
@@ -168,8 +168,12 @@ header {
                 border: none;
                 cursor: pointer;
             }
-            button:hover {
-                background: rgb(150, 210, 150);
+            button {
+                display: flex;
+                justify-content: center;
+            }
+            .button:focus {
+                outline: none;
             }
         }
         .hero-right {
